@@ -12,8 +12,7 @@
     --color-danger-fg: #d1242f;
     --color-done-fg: #1a7f37;
 }
-
-body {
+html {
     font-family:
         "Libertinus Serif Display",
         -apple-system,
@@ -25,6 +24,9 @@ body {
         sans-serif;
     font-size: 16px;
     line-height: 1.5;
+}
+
+body {
     color: var(--color-fg-default);
     background-color: var(--color-canvas-default);
     max-width: 1012px;
@@ -33,322 +35,350 @@ body {
     box-sizing: border-box;
 }
 
-/* Headings */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
-    font-weight: 600;
-    line-height: 1.25;
-}
-
-h1 {
-    font-size: 2em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--color-border-muted);
-}
-
-h2 {
-    font-size: 1.5em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--color-border-muted);
-}
-
-h3 {
-    font-size: 1.25em;
-}
-
-h4 {
-    font-size: 1em;
-}
-
-h5 {
-    font-size: 0.875em;
-}
-
-h6 {
-    font-size: 0.85em;
-    color: var(--color-fg-muted);
-}
-
-/* Paragraphs and text */
-p {
-    margin-top: 0;
-    margin-bottom: 16px;
-}
-
-/* Text formatting */
-strong {
-    font-weight: 600;
-}
-
-em {
-    font-style: italic;
-}
-
-del {
-    text-decoration: line-through;
-}
-
-/* Links */
-a {
-    color: var(--color-accent-fg);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Lists */
-ul,
-ol {
-    margin-top: 0;
-    margin-bottom: 16px;
-    padding-left: 32px;
-}
-
-li {
-    margin-bottom: 0.25em;
-}
-
-li > p {
-    margin-top: 16px;
-}
-
-li + li {
-    margin-top: 0.25em;
-}
-
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* Task lists */
-ul li:has-text([x]) {
-    list-style: none;
-    position: relative;
-}
-
-ul li:has-text([]) {
-    list-style: none;
-    position: relative;
-}
-
-/* Code */
-code.inline {
-    padding: 0.2em 0.4em;
-    font-size: 85%;
-    background-color: var(--color-neutral-muted);
-    border-radius: 6px;
-    font-family:
-        ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono",
-        Menlo, monospace;
-}
-
-pre {
-    margin-top: 0;
-    margin-bottom: 16px;
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: var(--color-canvas-subtle);
-    border-radius: 6px;
-}
-
-pre code {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    line-height: inherit;
-    background-color: transparent;
-    border: 0;
-    font-family:
-        ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono",
-        Menlo, monospace;
-}
-
-/* Blockquotes */
-blockquote {
-    margin: 0 0 16px 0;
-    padding: 0 1em;
-    color: var(--color-fg-muted);
-    border-left: 0.25em solid var(--color-border-default);
-}
-
-blockquote > :first-child {
-    margin-top: 0;
-}
-
-blockquote > :last-child {
-    margin-bottom: 0;
-}
-
-/* Tables */
-table {
-    border-spacing: 0;
-    border-collapse: collapse;
-    margin-top: 0;
-    margin-bottom: 16px;
-    display: block;
-    width: max-content;
-    max-width: 100%;
-    overflow: auto;
-}
-
-table th {
-    font-weight: 600;
-}
-
-table th,
-table td {
-    padding: 6px 13px;
-    border: 1px solid var(--color-border-default);
-}
-
-table tr {
-    background-color: var(--color-canvas-default);
-    border-top: 1px solid var(--color-border-muted);
-}
-
-table tr:nth-child(2n) {
-    background-color: var(--color-canvas-subtle);
-}
-
-table th {
-    background-color: var(--color-canvas-subtle);
-}
-
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    box-sizing: content-box;
-}
-
-/* Horizontal rules */
-hr {
-    height: 0.25em;
-    padding: 0;
-    margin: 24px 0;
-    background-color: var(--color-border-default);
-    border: 0;
-}
-
-hr.thin {
-    height: 1px;
-    background-color: var(--color-border-muted);
-}
-
-hr.thick {
-    height: 4px;
-    background-color: var(--color-border-default);
-}
-
-hr.medium {
-    height: 2px;
-    background-color: var(--color-border-default);
-}
-
-/* HTML elements */
-details {
-    display: block;
-    margin: 16px 0;
-}
-
-summary {
-    display: list-item;
-    cursor: pointer;
-}
-
-kbd {
-    display: inline-block;
-    padding: 3px 5px;
-    font-size: 11px;
-    line-height: 10px;
-    color: var(--color-fg-default);
-    vertical-align: middle;
-    background-color: var(--color-canvas-subtle);
-    border: solid 1px var(--color-neutral-muted);
-    border-bottom-color: var(--color-border-muted);
-    border-radius: 6px;
-    box-shadow: inset 0 -1px 0 var(--color-border-muted);
-    font-family:
-        ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono",
-        Menlo, monospace;
-}
-
-mark {
-    background-color: var(--color-attention-subtle);
-    color: var(--color-fg-default);
-    padding: 0.1em 0.2em;
-    border-radius: 3px;
-}
-
-/* Math expressions */
-p:has-text($) {
-    font-family: "KaTeX_Main", "Times New Roman", serif;
-}
-
-/* Definition lists */
-dt {
-    font-weight: 600;
-    font-style: italic;
-    margin-top: 16px;
-}
-
-dd {
-    margin-left: 0;
-    margin-bottom: 16px;
-    padding-left: 32px;
-}
-
-/* Responsive design */
-@media (max-width: 767px) {
-    body {
-        padding: 15px;
+header {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    div {
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 3rem;
+            margin: 0;
+        }
+        p {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 2rem;
+            margin: 0;
+        }
     }
-
-    table {
-        font-size: 14px;
-    }
-
-    pre {
-        font-size: 12px;
+    img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 100%;
     }
 }
 
-/* Print styles */
-@media print {
-    body {
-        font-size: 12pt;
-        line-height: 1.4;
-    }
-
+.markdown {
+    /* Headings */
     h1,
     h2,
     h3,
     h4,
     h5,
     h6 {
-        page-break-after: avoid;
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    h1 {
+        font-size: 2em;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid var(--color-border-muted);
+    }
+
+    h2 {
+        font-size: 1.5em;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid var(--color-border-muted);
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    h5 {
+        font-size: 0.875em;
+    }
+
+    h6 {
+        font-size: 0.85em;
+        color: var(--color-fg-muted);
+    }
+
+    /* Paragraphs and text */
+    p {
+        margin-top: 0;
+        margin-bottom: 16px;
+    }
+
+    /* Text formatting */
+    strong {
+        font-weight: 600;
+    }
+
+    em {
+        font-style: italic;
+    }
+
+    del {
+        text-decoration: line-through;
+    }
+
+    /* Links */
+    a {
+        color: var(--color-accent-fg);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* Lists */
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 16px;
+        padding-left: 32px;
+    }
+
+    li {
+        margin-bottom: 0.25em;
+    }
+
+    li > p {
+        margin-top: 16px;
+    }
+
+    li + li {
+        margin-top: 0.25em;
+    }
+
+    ul ul,
+    ul ol,
+    ol ol,
+    ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    /* Task lists */
+    ul li:has-text([x]) {
+        list-style: none;
+        position: relative;
+    }
+
+    ul li:has-text([]) {
+        list-style: none;
+        position: relative;
+    }
+
+    /* Code */
+    code.inline {
+        padding: 0.2em 0.4em;
+        font-size: 85%;
+        background-color: var(--color-neutral-muted);
+        border-radius: 6px;
+        font-family:
+            ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+            "Liberation Mono", Menlo, monospace;
     }
 
     pre {
-        page-break-inside: avoid;
+        margin-top: 0;
+        margin-bottom: 16px;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: var(--color-canvas-subtle);
+        border-radius: 6px;
     }
 
+    pre code {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        line-height: inherit;
+        background-color: transparent;
+        border: 0;
+        font-family:
+            ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+            "Liberation Mono", Menlo, monospace;
+    }
+
+    /* Blockquotes */
+    blockquote {
+        margin: 0 0 16px 0;
+        padding: 0 1em;
+        color: var(--color-fg-muted);
+        border-left: 0.25em solid var(--color-border-default);
+    }
+
+    blockquote > :first-child {
+        margin-top: 0;
+    }
+
+    blockquote > :last-child {
+        margin-bottom: 0;
+    }
+
+    /* Tables */
     table {
-        page-break-inside: avoid;
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        width: max-content;
+        max-width: 100%;
+        overflow: auto;
+    }
+
+    table th {
+        font-weight: 600;
+    }
+
+    table th,
+    table td {
+        padding: 6px 13px;
+        border: 1px solid var(--color-border-default);
+    }
+
+    table tr {
+        background-color: var(--color-canvas-default);
+        border-top: 1px solid var(--color-border-muted);
+    }
+
+    table tr:nth-child(2n) {
+        background-color: var(--color-canvas-subtle);
+    }
+
+    table th {
+        background-color: var(--color-canvas-subtle);
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+        box-sizing: content-box;
+    }
+
+    /* Horizontal rules */
+    hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: var(--color-border-default);
+        border: 0;
+    }
+
+    hr.thin {
+        height: 1px;
+        background-color: var(--color-border-muted);
+    }
+
+    hr.thick {
+        height: 4px;
+        background-color: var(--color-border-default);
+    }
+
+    hr.medium {
+        height: 2px;
+        background-color: var(--color-border-default);
+    }
+
+    /* HTML elements */
+    details {
+        display: block;
+        margin: 16px 0;
+    }
+
+    summary {
+        display: list-item;
+        cursor: pointer;
+    }
+
+    kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font-size: 11px;
+        line-height: 10px;
+        color: var(--color-fg-default);
+        vertical-align: middle;
+        background-color: var(--color-canvas-subtle);
+        border: solid 1px var(--color-neutral-muted);
+        border-bottom-color: var(--color-border-muted);
+        border-radius: 6px;
+        box-shadow: inset 0 -1px 0 var(--color-border-muted);
+        font-family:
+            ui-monospace, SFMono-Regular, "SF Mono", Consolas,
+            "Liberation Mono", Menlo, monospace;
+    }
+
+    mark {
+        background-color: var(--color-attention-subtle);
+        color: var(--color-fg-default);
+        padding: 0.1em 0.2em;
+        border-radius: 3px;
+    }
+
+    /* Math expressions */
+    p:has-text($) {
+        font-family: "KaTeX_Main", "Times New Roman", serif;
+    }
+
+    /* Definition lists */
+    dt {
+        font-weight: 600;
+        font-style: italic;
+        margin-top: 16px;
+    }
+
+    dd {
+        margin-left: 0;
+        margin-bottom: 16px;
+        padding-left: 32px;
+    }
+
+    /* Responsive design */
+    @media (max-width: 767px) {
+        body {
+            padding: 15px;
+        }
+
+        table {
+            font-size: 14px;
+        }
+
+        pre {
+            font-size: 12px;
+        }
+    }
+
+    /* Print styles */
+    @media print {
+        body {
+            font-size: 12pt;
+            line-height: 1.4;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            page-break-after: avoid;
+        }
+
+        pre {
+            page-break-inside: avoid;
+        }
+
+        table {
+            page-break-inside: avoid;
+        }
     }
 }

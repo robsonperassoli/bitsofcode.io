@@ -1,19 +1,15 @@
 defmodule Boc.Articles do
   alias Boc.Markdown
 
-  def content_path() do
-    Path.join(:code.priv_dir(:boc), "content")
-  end
-
   def list_articles() do
-    File.ls!(content_path())
+    File.ls!(Boc.articles_path())
   end
 
   def compile_article(file_name) do
     [file_name_no_ext, _] = String.split(file_name, ".")
 
     {:ok, article} =
-      "#{content_path()}/#{file_name}"
+      "#{Boc.articles_path()}/#{file_name}"
       |> File.read!()
       |> Markdown.parse()
 
