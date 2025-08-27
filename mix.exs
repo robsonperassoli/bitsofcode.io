@@ -22,8 +22,10 @@ defmodule Boc.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:plug, "~> 1.18.1"},
-      {:bandit, "~> 1.8"}
+      {:plug, "~> 1.18"},
+      {:bandit, "~> 1.8"},
+      {:earmark, "~> 1.4"},
+      {:yaml_elixir, "~> 2.11"}
     ]
   end
 end

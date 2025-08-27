@@ -1,21 +1,6 @@
-# Boc
+# bitsofcode.io
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `boc` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:boc, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/boc>.
-
+[x] Compile articles on startup
+[x] Serve articles from memory for speed
+[x] Read front matter yaml from markdown files for metadata
+[] use directory structure for the url structure?
