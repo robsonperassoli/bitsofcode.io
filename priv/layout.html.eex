@@ -1,5 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
     <title><%= article.meta["title"] %></title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +19,15 @@
 <body>
   <header>
     <img src="https://avatars.githubusercontent.com/u/625089" />
-    <div>
+    <a href="/">
       <h1>Robson Perassoli</h1>
-      <p>Software Engineer</p>
-    </div>
+      <h2>Software Engineer</h2>
+    </a>
+    <nav>
+        <a href="https://github.com/robsonperassoli" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/robsonperassoli/" target="_blank">LinkedIn</a>
+        <a href="/dev">/dev</a>
+    </nav>
   </header>
 
   <article class="markdown">

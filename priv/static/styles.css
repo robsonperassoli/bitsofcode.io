@@ -39,14 +39,15 @@ header {
     display: flex;
     gap: 1rem;
     padding-bottom: 1rem;
-    div {
+    a {
+        display: block;
         h1 {
             font-size: 3rem;
             font-weight: 800;
             line-height: 3rem;
             margin: 0;
         }
-        p {
+        h2 {
             font-size: 2rem;
             font-weight: 600;
             line-height: 2rem;
