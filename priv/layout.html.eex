@@ -17,17 +17,23 @@
     <link href="/public/styles.css" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="https://avatars.githubusercontent.com/u/625089" />
-    <a href="/">
-      <h1>Robson Perassoli</h1>
-      <h2>Software Engineer</h2>
-    </a>
-    <nav>
-        <a href="https://github.com/robsonperassoli" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/robsonperassoli/" target="_blank">LinkedIn</a>
-        <a href="/dev">/dev</a>
+  <header class="masthead">
+    <nav class="header-nav">
+      <a href="/home">/home</a>
+      <a href="/dev">/dev-tools</a>
+      <a href="https://github.com/robsonperassoli" target="_blank">/Github</a>
+      <a href="https://www.linkedin.com/in/robsonperassoli/" target="_blank">/LinkedIn</a>
+
     </nav>
+
+    <img src="https://avatars.githubusercontent.com/u/625089" alt="Robson Perassoli" class="author-photo" />
+
+    <div class="nameplate">
+      <h1><a href="/">Robson Perassoli</a></h1>
+      <h2>Software Engineer</h2>
+    </div>
+
+
   </header>
 
   <article class="markdown">
