@@ -31,7 +31,9 @@ defmodule Boc.MixProject do
       {:plug, "~> 1.18"},
       {:bandit, "~> 1.8"},
       {:earmark, "~> 1.4"},
-      {:yaml_elixir, "~> 2.11"}
+      {:yaml_elixir, "~> 2.11"},
+      {:exsync, "~> 0.4", only: :dev},
+      {:file_system, "~> 1.1", only: :dev}
     ]
   end
 end

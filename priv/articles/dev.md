@@ -5,3 +5,4 @@ title: "My dev Tools"
  - alacritty
  - starship
  - zellij
+ - zsh

@@ -7,7 +7,8 @@ defmodule Boc.Application do
   def start(_type, _args) do
     children = [
       {Bandit, plug: Boc.Router},
-      {Boc.Articles.DB, []}
+      {Boc.Articles.DB, []},
+      {Boc.ArticlesMonitor, []}
     ]
 
     opts = [strategy: :one_for_one, name: Boc.Supervisor]
