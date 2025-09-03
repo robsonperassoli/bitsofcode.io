@@ -9,7 +9,11 @@ defmodule Boc.Application do
       [
         {Bandit, plug: Boc.Router},
         {Boc.Articles.DB, []}
-      ] ++ if(Boc.articles_reloader_enabled?(), do: [{Boc.ArticlesMonitor, []}], else: [])
+      ] ++
+        if(Boc.articles_reloader_enabled?(),
+          do: [{Boc.ArticlesMonitor, []}],
+          else: []
+        )
 
     opts = [strategy: :one_for_one, name: Boc.Supervisor]
     Supervisor.start_link(children, opts)
