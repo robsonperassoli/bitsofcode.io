@@ -4,13 +4,14 @@ defmodule Boc.RouterTest do
   import Plug.Test
   # import Plug.Conn
 
-  test "/ returns hello world" do
+  test "/ returns home route" do
     conn =
       conn(:get, "/")
       |> Boc.Router.call([])
 
     assert conn.status === 200
-    assert conn.resp_body === "hello world!"
+    assert conn.resp_body =~ "About me"
+    assert conn.resp_body =~ "Articles"
   end
 
   test "unmatched route returns 404" do
