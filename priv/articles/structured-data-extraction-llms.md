@@ -5,7 +5,7 @@ tags: ["llm", "ai", "ocr", "document parsing", "structured data extraction"]
 ---
 # How I Use LLM's to Extract Structured Data
 
-Large language models (aka AI) are a hot topic right now. Some consider LLM's the greatest thing that ever existed while others think it's the doom of society as we know and everything will go downhill from here. Wow, bold statements, not packing a lot of good sense in them. It seems outrageous just to write that down, but I've seen some crazy things out there kids. Crazy things! We'll let's focus on what we know, it's pretty incredible how far we've come and the things we can do with these generational models.
+Large language models (aka AI) are a hot topic right now. Some consider LLM's the greatest thing that ever existed while others think it's the doom of society as we know and everything will go downhill from here. Wow, bold statements, not packing a lot of good sense in them. It seems outrageous just to write that down, but I've seen some crazy things out there kids. Crazy things! Well let's focus on what we know, it's pretty incredible how far we've come and the things we can do with these generational models.
 
 One of the things I learned it can do well is understand text and transform that in a structured format, so that it can be used by our beloved software systems. I'll try to show you how you can extract text from pdf documents, supposedly documents with many formats and layouts and make it into a json.
 
