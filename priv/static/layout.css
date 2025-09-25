@@ -50,6 +50,10 @@
         0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
 }
 
+html {
+    font-family: "Spectral", "Times New Roman", serif;
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
@@ -61,7 +65,7 @@ body {
     flex-direction: column;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 2rem 1.5rem;
 }
 
 .masthead {
@@ -81,7 +85,6 @@ body {
 }
 
 .header-nav a {
-    font-family: "Libertinus Serif Display", "Times New Roman", serif;
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--text-secondary);
@@ -106,7 +109,6 @@ body {
 }
 
 .nameplate h1 {
-    font-family: "Libertinus Serif Display", "Times New Roman", serif;
     font-size: 3.5rem;
     font-weight: 400;
     color: var(--text-primary);
@@ -126,7 +128,6 @@ body {
 }
 
 .nameplate h2 {
-    font-family: "Libertinus Serif Display", "Times New Roman", serif;
     font-size: 0.9rem;
     font-weight: 400;
     color: var(--text-secondary);
