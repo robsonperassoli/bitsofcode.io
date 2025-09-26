@@ -11,7 +11,7 @@ This project is a handbuilt web server that compiles and serves markdown article
 - ✅ Compile articles on startup for fast serving
 - ✅ Serve articles from memory for speed
 - ✅ Read front matter YAML from markdown files for metadata
-- 🔄 Directory structure-based URL routing (planned)
+- ✅ Directory structure-based URL routing
 
 ## Handmade Architecture
 

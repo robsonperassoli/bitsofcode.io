@@ -13,6 +13,10 @@ defmodule Boc.Articles.DB do
     Agent.update(__MODULE__, &Map.put(&1, key, article))
   end
 
+  def all_articles() do
+    Agent.get(__MODULE__, & &1)
+  end
+
   def reset() do
     Agent.update(__MODULE__, fn _ -> prepare_articles() end)
   end

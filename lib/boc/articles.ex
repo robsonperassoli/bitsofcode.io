@@ -2,7 +2,14 @@ defmodule Boc.Articles do
   alias Boc.Markdown
 
   def list_articles() do
-    File.ls!(Boc.articles_path())
+    base_dir = Boc.articles_path()
+    {result, 0} = System.cmd("find", [base_dir])
+
+    result
+    |> String.split("\n")
+    |> Enum.map(&String.trim/1)
+    |> Enum.map(&String.trim_leading(&1, base_dir <> "/"))
+    |> Enum.filter(&String.ends_with?(&1, ".md"))
   end
 
   def compile_article(file_name) do

@@ -14,7 +14,8 @@ defmodule Boc.Router do
     render_article(conn, "home")
   end
 
-  get "/:key" do
+  get "/*parts" do
+    key = Path.join(parts)
     render_article(conn, key)
   end
 
